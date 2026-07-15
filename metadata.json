@@ -1,0 +1,6 @@
+{
+  "name": "ZMAX General Stationers",
+  "description": "Premium general stationery, educational books, office equipment, and printing services in Kenya with easy WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
