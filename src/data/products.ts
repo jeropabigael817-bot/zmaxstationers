@@ -11,7 +11,7 @@ export const CATEGORIES: Category[] = [
     name: 'Books & Bibles',
     description: 'Bibles, educational manuals, and inspirational self-help bestsellers.',
     icon: 'BookOpen',
-    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1612350495102-fb43af38bb16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzJTIwYW5kJTIwYmlibGV8ZW58MHx8MHx8fDA%3D'
   },
   {
     id: 'office',
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     price: 650,
     category: 'books',
     description: 'Kalenjin Hymnal song book with zipped protector cover. Easy to carry and durable.',
-    image: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338694-a34cce63488c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzR8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -596,7 +596,7 @@ export const PRODUCTS: Product[] = [
     price: 80,
     category: 'accessories',
     description: 'Small lightweight non-woven drawstring bag for daily carries, gym shoes, or stationery bundles.',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206009999-9c1815d99c0e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
