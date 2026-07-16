@@ -34,6 +34,7 @@ import HeroSection from './components/HeroSection';
 import ProductCard from './components/ProductCard';
 import CartDrawer from './components/CartDrawer';
 import WhatsAppFloatingWidget from './components/WhatsAppFloatingWidget';
+import BackToTopButton from './components/BackToTopButton';
 
 import { PRODUCTS, CATEGORIES } from './data/products';
 import { Product, CartItem, CategoryType } from './types';
@@ -1020,6 +1021,7 @@ Message: ${content}
 
       {/* Floating interactive elements */}
       <WhatsAppFloatingWidget />
+      <BackToTopButton />
 
       {/* Slide-out Shopping Cart drawer */}
       <CartDrawer 

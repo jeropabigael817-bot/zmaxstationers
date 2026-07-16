@@ -1924,4 +1924,25 @@ window.resetCatalogSearchFilters = function() {
 // --- 10. BOOT ENGINE ---
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
+  
+  // Back to top button logic
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'scale-75', 'translate-y-4', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100', 'scale-100', 'translate-y-0');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'scale-75', 'translate-y-4', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
