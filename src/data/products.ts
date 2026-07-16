@@ -47,11 +47,11 @@ export const PRODUCTS: Product[] = [
   // Books & Bibles
   {
     id: 'b1',
-    name: '500 BOOK',
+    name: 'TIENWOKIK  BOOK',
     price: 500,
     category: 'books',
-    description: 'High-quality 500-page counter/exercise book, ideal for records and business logging.',
-    image: 'https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=300',
+    description: 'High-quality  Kalenjin hymn  book .',
+    image: 'https://images.unsplash.com/photo-1784192929978-adaa4fbb84c2?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs',
     featured: true
   },
@@ -296,7 +296,7 @@ export const PRODUCTS: Product[] = [
     price: 150,
     category: 'office',
     description: 'Dust-free quick drying craft glue for paper, cardboard, and fabric applications.',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611694-e95718cb0289?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -418,7 +418,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'Architect’s triangular scale ruler. Made of high-grade plastic with multiple color-coded ratios.',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338303-733492769f27?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -522,7 +522,7 @@ export const PRODUCTS: Product[] = [
     price: 80,
     category: 'accessories',
     description: 'High grade dustless school chalks. Safe, clean, and minimizes dust-related allergies.',
-    image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1141?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784192930007-db2430169cb8?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'box'
   },
   {
@@ -531,7 +531,7 @@ export const PRODUCTS: Product[] = [
     price: 800,
     category: 'accessories',
     description: 'Large economy carton of premium white dustless school chalks. Perfect for institutions.',
-    image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1141?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784192930007-db2430169cb8?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'carton'
   },
   {
@@ -540,7 +540,7 @@ export const PRODUCTS: Product[] = [
     price: 300,
     category: 'accessories',
     description: 'Satin gloss decorative ribbons, ideal for corporate gift wraps, events, and school award bands.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338800-94f0842e1395?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -549,7 +549,7 @@ export const PRODUCTS: Product[] = [
     price: 80,
     category: 'accessories',
     description: 'Flexible soft silicone zippered pencil pouch. Easy wash, waterproof, and extremely trendy.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201339078-9e570966712e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjB8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -605,7 +605,7 @@ export const PRODUCTS: Product[] = [
     price: 150,
     category: 'accessories',
     description: 'Soft 2-ply sanitary facial tissues pocket pack, highly absorbent.',
-    image: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=300',
+    image: 'https://plus.unsplash.com/premium_photo-1682148737203-8118bb2b3e07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGFwZXIlMjByb2xsfGVufDB8fDB8fHww',
     unit: 'pack'
   },
   {
@@ -623,7 +623,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'accessories',
     description: 'Sleek cloth zipper pocket designed for neat classification of pens, highlighters, and USBs.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611733-fd4b55eb07b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTV8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   }
 ];
