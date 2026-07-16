@@ -613,42 +613,6 @@ export default function App() {
 
                 </div>
 
-                {/* Fine Controls: Sorting and Price Limit Slider */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-gray-50 pt-4 gap-4">
-                  
-                  {/* Price Filter */}
-                  <div className="flex items-center space-x-3 bg-gray-50/60 p-2.5 rounded-xl border border-gray-100 shrink-0">
-                    <SlidersHorizontal className="h-4 w-4 text-gray-400" />
-                    <span className="text-xs font-bold text-gray-500">Max Price:</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="45000"
-                      step="50"
-                      value={maxPrice}
-                      onChange={(e) => setMaxPrice(Number(e.target.value))}
-                      className="w-24 sm:w-36 accent-red-600 h-1 bg-gray-200 rounded-lg cursor-pointer"
-                    />
-                    <span className="text-xs font-extrabold text-red-600">KES {maxPrice.toLocaleString()}</span>
-                  </div>
-
-                  {/* Sorting */}
-                  <div className="flex items-center space-x-2.5">
-                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Sort by:</span>
-                    <select
-                      value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value)}
-                      className="bg-gray-50 border border-gray-100 hover:border-red-200 rounded-xl px-4 py-2 text-xs font-extrabold text-gray-700 outline-none focus:ring-1 focus:ring-red-400 transition-all"
-                    >
-                      <option value="featured">Best Sellers & Featured First</option>
-                      <option value="price-asc">Price: Low to High</option>
-                      <option value="price-desc">Price: High to Low</option>
-                      <option value="name-asc">Alphabetical: A to Z</option>
-                    </select>
-                  </div>
-
-                </div>
-
               </div>
 
               {/* Products Display Grid */}
