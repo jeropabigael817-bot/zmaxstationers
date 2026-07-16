@@ -186,7 +186,7 @@ export const PRODUCTS: Product[] = [
     price: 40,
     category: 'office',
     description: '30cm shatterproof flexible plastic ruler. Safe for school children and high durability.',
-    image: 'https://images.unsplash.com/photo-1519311965067-36d3e5f43d39?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338736-0ca6e1bcc4ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjR8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
