@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { ShoppingCart, Menu, X, BookOpen, Search, Phone } from 'lucide-react';
+import { PRODUCTS, CATEGORIES } from '../data/products';
 
 interface HeaderProps {
   activeTab: string;
@@ -24,6 +25,40 @@ export default function Header({
   setSearchQuery 
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [showMobileSuggestions, setShowMobileSuggestions] = React.useState(false);
+
+  // Filter products for mobile suggestions dropdown
+  const mobileFilteredProducts = React.useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return [];
+    return PRODUCTS.filter((product) => {
+      const nameMatch = product.name.toLowerCase().includes(query);
+      const descMatch = product.description ? product.description.toLowerCase().includes(query) : false;
+      
+      const catObj = CATEGORIES.find(c => c.id === product.category);
+      const catMatch = catObj ? catObj.name.toLowerCase().includes(query) : false;
+      const catIdMatch = product.category.toLowerCase().includes(query);
+      
+      const brandMatch = product.brand ? product.brand.toLowerCase().includes(query) : false;
+      const implicitBrandMatch = 
+        (product.name.toLowerCase().includes('canon') && 'canon'.includes(query)) ||
+        (product.name.toLowerCase().includes('epson') && 'epson'.includes(query)) ||
+        (product.name.toLowerCase().includes('clarity') && 'clarity'.includes(query)) ||
+        (product.name.toLowerCase().includes('charity') && 'charity'.includes(query)) ||
+        (product.name.toLowerCase().includes('casio') && 'casio'.includes(query)) ||
+        (product.name.toLowerCase().includes('oxford') && 'oxford'.includes(query));
+
+      const keywords = product.keywords || [];
+      const keywordsMatch = keywords.some(k => k.toLowerCase().includes(query)) ||
+        (product.category === 'books' && ['bible', 'book', 'hymnal', 'songbook', 'christian', 'literature', 'read', 'holy'].some(k => k.includes(query))) ||
+        (product.category === 'office' && ['pen', 'file', 'folder', 'scissors', 'punch', 'tape', 'glue', 'staple', 'organize'].some(k => k.includes(query))) ||
+        (product.category === 'art_math' && ['ruler', 'drawing', 'math', 'calculator', 'pencil', 'watercolor', 'canvas', 'sketch', 'paint', 'paper', 'instrument'].some(k => k.includes(query))) ||
+        (product.category === 'ink_tech' && ['printer', 'ink', 'toner', 'print', 'copier', 'scanner', 'laminate', 'thermal', 'pos'].some(k => k.includes(query))) ||
+        (product.category === 'accessories' && ['recorder', 'flute', 'music', 'calculator', 'ribbon', 'pouch', 'tissue', 'case', 'bag'].some(k => k.includes(query)));
+
+      return nameMatch || descMatch || catMatch || catIdMatch || brandMatch || implicitBrandMatch || keywordsMatch;
+    });
+  }, [searchQuery]);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -122,7 +157,7 @@ export default function Header({
         </div>
 
         {/* Lower Row: Mobile Sticky Search Bar (below logo) */}
-        <div className="md:hidden pb-3.5 pt-0.5">
+        <div className="md:hidden pb-3.5 pt-0.5 relative">
           <div className="relative flex items-center bg-gray-50 border border-gray-200 rounded-xl px-3.5 h-12 focus-within:border-red-300 focus-within:bg-white focus-within:ring-1 focus-within:ring-red-100 transition-all">
             <Search className="h-5 w-5 text-gray-400 mr-2.5 shrink-0" />
             <input
@@ -131,8 +166,20 @@ export default function Header({
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
+                setShowMobileSuggestions(true);
                 if (activeTab !== 'shop') {
                   setActiveTab('shop');
+                }
+              }}
+              onFocus={() => setShowMobileSuggestions(true)}
+              onBlur={() => {
+                // Small delay to allow clicking suggestions before blur triggers
+                setTimeout(() => setShowMobileSuggestions(false), 250);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  setShowMobileSuggestions(false);
+                  (e.target as HTMLInputElement).blur();
                 }
               }}
               className="w-full bg-transparent text-gray-800 placeholder-gray-400 font-medium text-base outline-none border-none p-0 focus:ring-0"
@@ -140,12 +187,69 @@ export default function Header({
             {searchQuery && (
               <button 
                 onClick={() => setSearchQuery('')}
-                className="text-xs font-black text-gray-400 hover:text-gray-600 active:text-gray-900 px-1 py-1"
+                className="text-xs font-black text-gray-400 hover:text-gray-600 active:text-gray-900 px-1 py-1 cursor-pointer"
               >
                 Clear
               </button>
             )}
           </div>
+
+          {/* Mobile Suggestions Dropdown */}
+          {showMobileSuggestions && searchQuery.trim().length > 0 && (
+            <div className="absolute top-full left-0 right-0 mt-1.5 bg-white border border-gray-150 rounded-2xl shadow-xl max-h-72 overflow-y-auto z-50">
+              {mobileFilteredProducts.length === 0 ? (
+                <div className="p-4 text-center text-sm text-gray-500 font-semibold">
+                  No products found.
+                </div>
+              ) : (
+                <div className="p-1.5 space-y-0.5">
+                  <div className="px-3 py-1 text-[9px] font-black text-gray-400 uppercase tracking-wider border-b border-gray-50 mb-1">
+                    Suggested ({mobileFilteredProducts.length})
+                  </div>
+                  {mobileFilteredProducts.slice(0, 5).map((product) => {
+                    const catObj = CATEGORIES.find(c => c.id === product.category);
+                    return (
+                      <button
+                        key={product.id}
+                        onClick={() => {
+                          setSearchQuery(product.name);
+                          setShowMobileSuggestions(false);
+                          if (activeTab !== 'shop') {
+                            setActiveTab('shop');
+                          }
+                          setTimeout(() => {
+                            const element = document.getElementById(`product-card-${product.id}`);
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                              element.classList.add('ring-2', 'ring-red-500');
+                              setTimeout(() => element.classList.remove('ring-2', 'ring-red-500'), 2000);
+                            }
+                          }, 150);
+                        }}
+                        className="w-full flex items-center p-2 rounded-xl hover:bg-gray-50 active:bg-gray-100 transition-colors text-left"
+                      >
+                        <img
+                          src={product.image || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=150'}
+                          alt={product.name}
+                          className="h-9 w-9 object-contain rounded-lg border border-gray-100 bg-gray-50/50 p-1 mr-3 shrink-0"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-sm font-bold text-gray-900 truncate">{product.name}</h4>
+                          <p className="text-[10px] text-gray-400 font-medium truncate">
+                            {catObj?.name || product.category}
+                          </p>
+                        </div>
+                        <span className="text-xs font-black text-red-600 ml-2">
+                          KES {product.price.toLocaleString()}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

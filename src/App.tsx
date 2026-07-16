@@ -46,6 +46,14 @@ export default function App() {
   const [maxPrice, setMaxPrice] = useState<number>(45000);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [showDesktopSuggestions, setShowDesktopSuggestions] = useState<boolean>(false);
+
+  // Automatically switch to 'all' category when user is actively searching
+  useEffect(() => {
+    if (searchQuery.trim().length > 0) {
+      setSelectedCategory('all');
+    }
+  }, [searchQuery]);
 
   // Local Storage integration for Cart memory
   useEffect(() => {
@@ -112,9 +120,36 @@ export default function App() {
 
   // Filter & Sort Products logic
   const filteredProducts = PRODUCTS.filter((product) => {
-    const matchesSearch = 
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      (product.description && product.description.toLowerCase().includes(searchQuery.toLowerCase()));
+    const query = searchQuery.trim().toLowerCase();
+    
+    let matchesSearch = true;
+    if (query) {
+      const nameMatch = product.name.toLowerCase().includes(query);
+      const descMatch = product.description ? product.description.toLowerCase().includes(query) : false;
+      
+      const catObj = CATEGORIES.find(c => c.id === product.category);
+      const catMatch = catObj ? catObj.name.toLowerCase().includes(query) : false;
+      const catIdMatch = product.category.toLowerCase().includes(query);
+      
+      const brandMatch = product.brand ? product.brand.toLowerCase().includes(query) : false;
+      const implicitBrandMatch = 
+        (product.name.toLowerCase().includes('canon') && 'canon'.includes(query)) ||
+        (product.name.toLowerCase().includes('epson') && 'epson'.includes(query)) ||
+        (product.name.toLowerCase().includes('clarity') && 'clarity'.includes(query)) ||
+        (product.name.toLowerCase().includes('charity') && 'charity'.includes(query)) ||
+        (product.name.toLowerCase().includes('casio') && 'casio'.includes(query)) ||
+        (product.name.toLowerCase().includes('oxford') && 'oxford'.includes(query));
+
+      const keywords = product.keywords || [];
+      const keywordsMatch = keywords.some(k => k.toLowerCase().includes(query)) ||
+        (product.category === 'books' && ['bible', 'book', 'hymnal', 'songbook', 'christian', 'literature', 'read', 'holy'].some(k => k.includes(query))) ||
+        (product.category === 'office' && ['pen', 'file', 'folder', 'scissors', 'punch', 'tape', 'glue', 'staple', 'organize'].some(k => k.includes(query))) ||
+        (product.category === 'art_math' && ['ruler', 'drawing', 'math', 'calculator', 'pencil', 'watercolor', 'canvas', 'sketch', 'paint', 'paper', 'instrument'].some(k => k.includes(query))) ||
+        (product.category === 'ink_tech' && ['printer', 'ink', 'toner', 'print', 'copier', 'scanner', 'laminate', 'thermal', 'pos'].some(k => k.includes(query))) ||
+        (product.category === 'accessories' && ['recorder', 'flute', 'music', 'calculator', 'ribbon', 'pouch', 'tissue', 'case', 'bag'].some(k => k.includes(query)));
+
+      matchesSearch = nameMatch || descMatch || catMatch || catIdMatch || brandMatch || implicitBrandMatch || keywordsMatch;
+    }
     
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     const matchesPrice = product.price <= maxPrice;
@@ -448,9 +483,105 @@ export default function App() {
                       type="text"
                       placeholder="Search for bibles, rulers, recorders..."
                       value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-3 py-2 bg-transparent text-gray-800 placeholder-gray-400 font-medium text-sm outline-none border-none focus:ring-0 rounded-lg"
+                      onChange={(e) => {
+                        setSearchQuery(e.target.value);
+                        setShowDesktopSuggestions(true);
+                      }}
+                      onFocus={() => setShowDesktopSuggestions(true)}
+                      onBlur={() => {
+                        // Delay closing the suggestions dropdown so users can click on results
+                        setTimeout(() => setShowDesktopSuggestions(false), 250);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          setShowDesktopSuggestions(false);
+                          setSelectedCategory('all');
+                          setActiveTab('shop');
+                          (e.target as HTMLInputElement).blur();
+                        }
+                      }}
+                      className="w-full pl-10 pr-10 py-2 bg-transparent text-gray-800 placeholder-gray-400 font-medium text-sm outline-none border-none focus:ring-0 rounded-lg"
                     />
+                    {searchQuery && (
+                      <button
+                        onClick={() => {
+                          setSearchQuery('');
+                          setShowDesktopSuggestions(false);
+                        }}
+                        className="absolute right-4 text-xs font-black text-gray-400 hover:text-gray-600 active:text-gray-900 px-1 py-1 cursor-pointer"
+                        title="Clear search query"
+                      >
+                        Clear
+                      </button>
+                    )}
+
+                    {/* Desktop Autocomplete Dropdown */}
+                    {showDesktopSuggestions && searchQuery.trim().length > 0 && (
+                      <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-150 rounded-2xl shadow-xl max-h-80 overflow-y-auto z-50">
+                        {filteredProducts.length === 0 ? (
+                          <div className="p-4 text-center text-sm text-gray-500 font-medium">
+                            No products found.
+                          </div>
+                        ) : (
+                          <div className="p-2 space-y-1">
+                            <div className="px-3 py-1.5 text-[10px] font-black text-gray-400 uppercase tracking-wider border-b border-gray-50 mb-1">
+                              Matching Products ({filteredProducts.length})
+                            </div>
+                            {filteredProducts.slice(0, 6).map((product) => {
+                              const catObj = CATEGORIES.find(c => c.id === product.category);
+                              return (
+                                <button
+                                  key={product.id}
+                                  onClick={() => {
+                                    setSearchQuery(product.name);
+                                    setShowDesktopSuggestions(false);
+                                    setSelectedCategory('all');
+                                    setActiveTab('shop');
+                                    setTimeout(() => {
+                                      const element = document.getElementById(`product-card-${product.id}`);
+                                      if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                        element.classList.add('ring-2', 'ring-red-500');
+                                        setTimeout(() => element.classList.remove('ring-2', 'ring-red-500'), 2000);
+                                      }
+                                    }, 150);
+                                  }}
+                                  className="w-full flex items-center p-2 rounded-xl hover:bg-gray-50 transition-colors text-left"
+                                >
+                                  <img
+                                    src={product.image || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=150'}
+                                    alt={product.name}
+                                    className="h-10 w-10 object-contain rounded-lg border border-gray-100 bg-gray-50/50 p-1 mr-3 shrink-0"
+                                    referrerPolicy="no-referrer"
+                                  />
+                                  <div className="flex-1 min-w-0">
+                                    <h4 className="text-sm font-bold text-gray-900 truncate">{product.name}</h4>
+                                    <p className="text-[11px] text-gray-400 font-medium truncate">
+                                      {catObj?.name || product.category}
+                                    </p>
+                                  </div>
+                                  <span className="text-xs font-black text-red-600 ml-2">
+                                    KES {product.price.toLocaleString()}
+                                  </span>
+                                </button>
+                              );
+                            })}
+                            {filteredProducts.length > 6 && (
+                              <button
+                                onClick={() => {
+                                  setSelectedCategory('all');
+                                  setActiveTab('shop');
+                                  setShowDesktopSuggestions(false);
+                                }}
+                                className="w-full text-center py-2 text-xs font-bold text-red-600 hover:bg-red-50 rounded-xl transition-all"
+                              >
+                                View all {filteredProducts.length} results
+                              </button>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   {/* Category Pill Buttons (Horizontal Scrollable Chips) */}
@@ -527,9 +658,9 @@ export default function App() {
                     <Search className="h-10 w-10" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">No stationery products found</h3>
+                    <h3 className="text-lg font-bold text-gray-900">No products found.</h3>
                     <p className="text-sm text-gray-500 max-w-sm mx-auto mt-1">
-                      No matches found for your current filters. Try relaxing your price limit slider or changing the keyword query!
+                      No matches found for your current search or filters. Try relaxing your price limit slider or changing the search query!
                     </p>
                   </div>
                   <button
@@ -541,7 +672,7 @@ export default function App() {
                     }}
                     className="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-xl transition-all shadow-md text-xs cursor-pointer"
                   >
-                    Reset All Filters
+                    Clear Search
                   </button>
                 </div>
               ) : (

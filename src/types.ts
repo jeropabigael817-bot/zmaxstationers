@@ -22,6 +22,8 @@ export interface Product {
   image?: string; // Picsum / local images
   unit?: string;
   featured?: boolean;
+  brand?: string;
+  keywords?: string[];
 }
 
 export interface CartItem {

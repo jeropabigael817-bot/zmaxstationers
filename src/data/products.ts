@@ -340,7 +340,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'a2',
-    name: 'PHOTO PAPER A4 (Glossy)',
+    name: 'Photo Paper A4',
     price: 200,
     category: 'art_math',
     description: 'Superb glossy A4 photo papers for sharp high-resolution prints. Ideal for inkjets.',
@@ -349,7 +349,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'a3',
-    name: 'PHOTO PAPER 4R (Glossy)',
+    name: 'Glossy Photo Paper',
     price: 200,
     category: 'art_math',
     description: 'Excellent glossy photo papers, pre-cut to standard 4R postcard size (4x6 inches).',
@@ -358,10 +358,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'a4',
-    name: 'PREMIUM MATTE PAPER',
+    name: 'Sticker Paper',
     price: 250,
     category: 'art_math',
-    description: 'Matte coated premium printing paper. Excellent for high quality flyers, artwork, and reports.',
+    description: 'Premium self-adhesive sticker paper sheets. Excellent for custom labeling, crafts, and high-quality stickers.',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=300',
     unit: 'pack'
   },
@@ -470,10 +470,28 @@ export const PRODUCTS: Product[] = [
   // Printers & Printing Media
   {
     id: 'i1',
-    name: 'CHARITY INK Bottle',
+    name: 'Clarity Ink Bottles',
     price: 180,
     category: 'ink_tech',
-    description: 'Vibrant and quick-drying duplication ink or stamp pad ink. Crisp impressions.',
+    description: 'Vibrant and quick-drying duplication ink or stamp pad ink. Crisp impressions. Highly clear and reliable.',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    unit: 'pcs'
+  },
+  {
+    id: 'i1_canon',
+    name: 'Canon Ink',
+    price: 1200,
+    category: 'ink_tech',
+    description: 'Genuine Canon printer ink bottle for rich, vibrant colors and deep blacks in document and photo prints.',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    unit: 'pcs'
+  },
+  {
+    id: 'i1_epson',
+    name: 'Epson Ink',
+    price: 1100,
+    category: 'ink_tech',
+    description: 'High-yield Epson genuine ink bottle with spill-free refill mechanism. Delivers crisp black and color documents.',
     image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
     unit: 'pcs'
   },
