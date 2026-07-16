@@ -111,21 +111,15 @@ export default function Footer({ setActiveTab }: FooterProps) {
             <ul className="space-y-3.5 text-sm text-gray-400">
               <li className="flex items-center justify-between border-b border-gray-800 pb-2">
                 <span className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2 text-emerald-400" /> Monday - Friday:
+                  <Clock className="h-4 w-4 mr-2 text-emerald-400" /> Sunday - Friday:
                 </span>
-                <span className="text-white font-medium">8:00 AM - 6:00 PM</span>
-              </li>
-              <li className="flex items-center justify-between border-b border-gray-800 pb-2">
-                <span className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2 text-emerald-400" /> Saturday:
-                </span>
-                <span className="text-white font-medium">8:30 AM - 4:00 PM</span>
+                <span className="text-white font-medium">8:00 AM - 6:30 PM</span>
               </li>
               <li className="flex items-center justify-between pb-2">
                 <span className="flex items-center text-gray-500">
-                  <Clock className="h-4 w-4 mr-2 text-gray-600" /> Sundays & Holidays:
+                  <Clock className="h-4 w-4 mr-2 text-gray-600" /> Saturday:
                 </span>
-                <span className="text-amber-500 font-bold text-xs uppercase bg-amber-500/10 px-2 py-0.5 rounded">Closed</span>
+                <span className="text-red-400 font-bold text-xs uppercase bg-red-500/10 px-2 py-0.5 rounded">Closed</span>
               </li>
             </ul>
             <div className="pt-2 text-xs text-gray-500 italic">

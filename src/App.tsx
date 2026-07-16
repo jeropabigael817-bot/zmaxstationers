@@ -817,9 +817,8 @@ export default function App() {
                   <div>
                     <h3 className="font-extrabold text-sm text-gray-900 uppercase">Business Hours</h3>
                     <p className="text-xs text-gray-500 leading-relaxed mt-1">
-                      Mon - Fri: 8:00 AM - 6:00 PM <br />
-                      Saturday: 8:30 AM - 4:00 PM <br />
-                      Sundays: Closed
+                      Sun - Fri: 8:00 AM - 6:30 PM <br />
+                      Saturday: Closed
                     </p>
                   </div>
                 </div>

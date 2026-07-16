@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { X, ShoppingCart, Plus, Minus, Trash2, Phone, ClipboardCheck, AlertTriangle, Truck, MapPin } from 'lucide-react';
+import { X, ShoppingCart, Plus, Minus, Trash2, Phone, AlertTriangle, Truck, MapPin } from 'lucide-react';
 import { CartItem, OrderDetails } from '../types';
 
 interface CartDrawerProps {
@@ -353,36 +353,15 @@ ${orderDetails.notes ? `Special Instructions: ${orderDetails.notes}` : ''}
                           ></textarea>
                         </div>
 
-                        {/* WhatsApp Message Live Preview Box */}
-                        <div className="bg-gray-900 text-slate-300 rounded-2xl p-4.5 border border-slate-800 space-y-2">
-                          <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                            <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider flex items-center">
-                              <ClipboardCheck className="h-3.5 w-3.5 mr-1.5 text-emerald-400" />
-                              WhatsApp Message Live Preview
-                            </span>
-                            <span className="text-[10px] bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded font-bold uppercase">Dynamic</span>
-                          </div>
-                          <pre className="text-[11px] font-mono leading-relaxed whitespace-pre-wrap overflow-x-auto max-h-40 scrollbar-thin text-slate-100">
-                            {formattedMsg}
-                          </pre>
-                        </div>
-
                         {/* Checkout CTA */}
-                        <div className="pt-3">
+                        <div className="pt-4">
                           <button
                             type="submit"
                             id="whatsapp-checkout-btn"
-                            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-4 px-4 rounded-xl shadow-lg shadow-emerald-100 hover:shadow-xl transition-all flex flex-col items-center justify-center space-y-1 group cursor-pointer"
+                            className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-black py-4 px-4 rounded-xl shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer text-sm tracking-wide uppercase"
                           >
-                            <span className="text-sm tracking-wider uppercase flex items-center">
-                              📲 ORDER NOW ON WHATSAPP!
-                            </span>
-                            <span className="text-[11px] text-emerald-100 font-medium group-hover:text-white transition-colors">
-                              Send us your order and we'll respond instantly.
-                            </span>
-                            <span className="text-xs text-white font-extrabold bg-emerald-700 px-3 py-0.5 rounded-full mt-1">
-                              Store Hotline: 0727 209 415
-                            </span>
+                            <Phone className="h-4.5 w-4.5 fill-white stroke-none" />
+                            <span>Order Now</span>
                           </button>
                         </div>
                       </form>
