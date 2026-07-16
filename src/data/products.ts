@@ -334,7 +334,7 @@ export const PRODUCTS: Product[] = [
     price: 900,
     category: 'art_math',
     description: 'Precision grid graph paper, ideal for mathematics, engineering, and architecture sketches.',
-    image: 'https://images.unsplash.com/photo-1784208971275-637a37cc5a95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D
+    image: 'https://images.unsplash.com/photo-1784208971275-637a37cc5a95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'ream',
     featured: true
   },
@@ -463,7 +463,7 @@ export const PRODUCTS: Product[] = [
     price: 280,
     category: 'art_math',
     description: 'Elegant fountain pen calligraphy set with 4 distinct interchangeable metal nibs and rich black ink.',
-    image: 'https://images.unsplash.com/photo-1784206009984-b6e8e8240bf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTJ8fHxlbnwwfHx8fHw%3D
+    image: 'https://images.unsplash.com/photo-1784206009984-b6e8e8240bf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTJ8fHxlbnwwfHx8fHw%3D',
     unit: 'set'
   },
 
@@ -587,7 +587,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'accessories',
     description: 'High tensile strength binding threads, perfect for archival book stitching and craft stitching.',
-    image: 'https://images.unsplash.com/photo-1784201338288-20e8b7ef0607?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fHw%3D
+    image: 'https://images.unsplash.com/photo-1784201338288-20e8b7ef0607?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fHw%3D',
     unit: 'roll'
   },
   {
