@@ -18,7 +18,7 @@ export const CATEGORIES: Category[] = [
     name: 'Office & School Essentials',
     description: 'Pens, files, tapes, punchers, and desktop organization tools.',
     icon: 'Briefcase',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd45e9b2d4f?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1784198611829-cb3c8a7343de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzV8fHxlbnwwfHx8fHw%3D'
   },
   {
     id: 'art_math',
@@ -126,7 +126,7 @@ export const PRODUCTS: Product[] = [
     price: 750,
     category: 'books',
     description: '"Hustle: How to Charge Your Life with Ideas" or premium business handbook to skyrocket your career.',
-    image: 'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206009899-d8ea35c0261a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -135,7 +135,7 @@ export const PRODUCTS: Product[] = [
     price: 950,
     category: 'books',
     description: 'Bestseller financial book by Robert Kiyosaki, outlining wealth acceleration strategies.',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206009980-4cc39b03e3e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -145,7 +145,7 @@ export const PRODUCTS: Product[] = [
     price: 950,
     category: 'books',
     description: 'Stephen Covey’s classic handbook for personal and professional effectiveness and leadership.',
-    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206010006-7204b14d346f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs',
     featured: true
   },
@@ -155,7 +155,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     category: 'books',
     description: 'Classic philosophical book by Robert Greene on psychology, strategy, and power mechanics.',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206009898-fe5196e6a96f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs',
     featured: true
   },
@@ -268,7 +268,7 @@ export const PRODUCTS: Product[] = [
     price: 320,
     category: 'office',
     description: 'Premium quality thick board box file with secure closure. Ideal for archival storage.',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd45e9b2d4f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611694-9d4823af0740?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjB8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -278,7 +278,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'office',
     description: 'Strong adhesion heavy-duty packing tape for packages, sealing boxes, and wrapping.',
-    image: 'https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=300',
+    image: 'https://plus.unsplash.com/premium_photo-1680204967360-a56dc5ab8517?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UEFDS0lORyUyMFRBUEV8ZW58MHx8MHx8fDA%3D',
     unit: 'pcs'
   },
   {
@@ -287,7 +287,7 @@ export const PRODUCTS: Product[] = [
     price: 150,
     category: 'office',
     description: 'High strength, multi-purpose double-sided foam tape for mounting and quick school craftwork.',
-    image: 'https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611725-3c305870b328?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTR8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -305,7 +305,7 @@ export const PRODUCTS: Product[] = [
     price: 100,
     category: 'office',
     description: 'Full packet of high elasticity, strong tension rubber bands for bundling and general use.',
-    image: 'https://images.unsplash.com/photo-1594913785162-e6785b423cb4?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338554-6a69f2a95ff4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTJ8fHxlbnwwfHx8fHw%3D',
     unit: 'pack'
   },
   {
@@ -314,7 +314,7 @@ export const PRODUCTS: Product[] = [
     price: 50,
     category: 'office',
     description: 'Highly sensitive thermal receipt paper rolls for POS printers and credit card machines.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338387-792d75eade29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTd8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -323,7 +323,7 @@ export const PRODUCTS: Product[] = [
     price: 50,
     category: 'office',
     description: 'Comfortable fabric lanyards with secure metal hook for staff IDs, visitor cards, and keychains.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611829-cb3c8a7343de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDV8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
 
@@ -334,7 +334,7 @@ export const PRODUCTS: Product[] = [
     price: 900,
     category: 'art_math',
     description: 'Precision grid graph paper, ideal for mathematics, engineering, and architecture sketches.',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd45e9b2d4f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784208971275-637a37cc5a95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D
     unit: 'ream',
     featured: true
   },
@@ -344,7 +344,7 @@ export const PRODUCTS: Product[] = [
     price: 200,
     category: 'art_math',
     description: 'Superb glossy A4 photo papers for sharp high-resolution prints. Ideal for inkjets.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784192930208-6b957daf07f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fHw%3D',
     unit: 'pack'
   },
   {
@@ -353,7 +353,7 @@ export const PRODUCTS: Product[] = [
     price: 200,
     category: 'art_math',
     description: 'Excellent glossy photo papers, pre-cut to standard 4R postcard size (4x6 inches).',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784192929884-f9e70d2218d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Njl8fHxlbnwwfHx8fHw%3D',
     unit: 'pack'
   },
   {
@@ -362,7 +362,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'Premium self-adhesive sticker paper sheets. Excellent for custom labeling, crafts, and high-quality stickers.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=300',
+    image: 'https://plus.unsplash.com/premium_photo-1707146615071-4d888f924158?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fFN0aWNrZXIlMjBQYXBlciUyMGZvciUyMGxhYmVsbGluZ3xlbnwwfHwwfHx8MA%3D%3D',
     unit: 'pack'
   },
   {
@@ -371,7 +371,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'Classmate Clear Mathematical geometry set. Transparent tools with precise calibration.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784192929983-6852d80bc4b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Njd8fHxlbnwwfHx8fHw%3D00',
     unit: 'set'
   },
   {
@@ -380,7 +380,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'The genuine Helix Oxford Mathematical Instruments tin box. Trustworthy worldwide standard.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611827-94cc7045baa6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDd8fHxlbnwwfHx8fHw%3D',
     unit: 'set',
     featured: true
   },
@@ -390,7 +390,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'Comprehensive compass, protractor, and school drawing essentials kit.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611654-10cff304f82c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjF8fHxlbnwwfHx8fHw%3D',
     unit: 'set'
   },
   {
@@ -399,7 +399,7 @@ export const PRODUCTS: Product[] = [
     price: 420,
     category: 'art_math',
     description: 'Expanded set of compasses, dividers, set squares, and drafting rulers for advanced students.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338823-b60c763bcffb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzV8fHxlbnwwfHx8fHw%3D',
     unit: 'set'
   },
   {
@@ -408,7 +408,7 @@ export const PRODUCTS: Product[] = [
     price: 1200,
     category: 'art_math',
     description: 'Professional-grade engineering and architecture technical drafting set in a protective padded case.',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338340-ad2d3eb6a471?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjF8fHxlbnwwfHx8fHw%3D',
     unit: 'set',
     featured: true
   },
@@ -427,7 +427,7 @@ export const PRODUCTS: Product[] = [
     price: 320,
     category: 'art_math',
     description: 'Richly pigmented, break-resistant colored pencils. Highly vibrant results for sketches and art projects.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338423-7a72f4f7b725?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzl8fHxlbnwwfHx8fHw%3D',
     unit: 'pack'
   },
   {
@@ -436,7 +436,7 @@ export const PRODUCTS: Product[] = [
     price: 150,
     category: 'art_math',
     description: 'Multi-shade water color pan palette including a fine synthetic paint brush. Great for creative classrooms.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338296-292005485ea0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fHw%3D',
     unit: 'set'
   },
   {
@@ -445,7 +445,7 @@ export const PRODUCTS: Product[] = [
     price: 80,
     category: 'art_math',
     description: 'Affordable fluid water color tubes. Excellent for initial art experimentation and blending lessons.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611785-f917ab772c21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTV8fHxlbnwwfHx8fHw%3D',
     unit: 'set'
   },
   {
@@ -454,7 +454,7 @@ export const PRODUCTS: Product[] = [
     price: 200,
     category: 'art_math',
     description: 'Double-sided dry erase whiteboard and chalkboard. Perfect for student quick-notes and homework exercises.',
-    image: 'https://images.unsplash.com/photo-1572945281864-8fe49f550e7a?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338823-b60c763bcffb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzh8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -463,7 +463,7 @@ export const PRODUCTS: Product[] = [
     price: 280,
     category: 'art_math',
     description: 'Elegant fountain pen calligraphy set with 4 distinct interchangeable metal nibs and rich black ink.',
-    image: 'https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206009984-b6e8e8240bf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTJ8fHxlbnwwfHx8fHw%3D
     unit: 'set'
   },
 
@@ -474,7 +474,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'ink_tech',
     description: 'Vibrant and quick-drying duplication ink or stamp pad ink. Crisp impressions. Highly clear and reliable.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611799-22bd9b0de8ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTl8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -483,7 +483,7 @@ export const PRODUCTS: Product[] = [
     price: 1200,
     category: 'ink_tech',
     description: 'Genuine Canon printer ink bottle for rich, vibrant colors and deep blacks in document and photo prints.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784208969583-8e3b63576921?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -492,7 +492,7 @@ export const PRODUCTS: Product[] = [
     price: 1100,
     category: 'ink_tech',
     description: 'High-yield Epson genuine ink bottle with spill-free refill mechanism. Delivers crisp black and color documents.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784208967866-88eda2554a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -501,7 +501,7 @@ export const PRODUCTS: Product[] = [
     price: 45000,
     category: 'ink_tech',
     description: 'Professional high-speed heavy-duty printer, copier, and scanner. Ideal for school environments and active offices.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784206010042-9b6e9475b6fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs',
     featured: true
   },
@@ -511,7 +511,7 @@ export const PRODUCTS: Product[] = [
     price: 10,
     category: 'ink_tech',
     description: 'Waterproof protective laminate sheets for securing certificates, IDs, and flyers.',
-    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1663729929770-f40df1cdc078?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGFtaW5hdGluZyUyMHBhcGVyJTIwc2hlZXRzfGVufDB8fDB8fHww',
     unit: 'sheet'
   },
 
@@ -558,7 +558,7 @@ export const PRODUCTS: Product[] = [
     price: 290,
     category: 'accessories',
     description: 'Tough structured metal stationery case featuring neat divider compartments inside for school tools.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338746-758e7a70997b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjN8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -567,7 +567,7 @@ export const PRODUCTS: Product[] = [
     price: 240,
     category: 'accessories',
     description: 'Standard 8-hole plastic descant soprano recorder. Ideal for primary and secondary music lessons.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338814-776aff019e6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjJ8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -577,7 +577,7 @@ export const PRODUCTS: Product[] = [
     price: 1300,
     category: 'accessories',
     description: 'Authentic 240-function Casio secondary school scientific calculator. Highly durable keycaps.',
-    image: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338741-72e7b1035f92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjl8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -587,7 +587,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'accessories',
     description: 'High tensile strength binding threads, perfect for archival book stitching and craft stitching.',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338288-20e8b7ef0607?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fHw%3D
     unit: 'roll'
   },
   {
