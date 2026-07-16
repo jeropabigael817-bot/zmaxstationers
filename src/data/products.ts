@@ -70,7 +70,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     category: 'books',
     description: 'The Expositor Study Bible, King James Version (KJV). Perfect for detailed scripture study and notes.',
-    image: 'https://images.unsplash.com/photo-1543329064-9a59b9218177?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338698-e3f988d4f94f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTd8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     price: 1650,
     category: 'books',
     description: 'Kalenjin Holy Bible with premium zip closure to preserve and protect pages from wear and dust.',
-    image: 'https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338343-941c6fd99c4f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjN8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     price: 430,
     category: 'books',
     description: 'Swahili Christian literature and inspiring literature books.',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338705-5eab2aedb310?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -99,16 +99,16 @@ export const PRODUCTS: Product[] = [
     price: 430,
     category: 'books',
     description: 'Inspirational reading novel regarding natural life, ethics, and character building.',
-    image: 'https://images.unsplash.com/photo-1495640388908-05fa85288e61?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338687-5f4f0337de0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTh8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
     id: 'b7',
-    name: 'MATUMAINI BOOK',
+    name: 'Mshale wa matumaini MATUMAINI BOOK',
     price: 430,
     category: 'books',
     description: 'Highly motivational Swahili literature book focused on hope, work ethic, and resilience.',
-    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338567-cd0657906ff6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -117,7 +117,7 @@ export const PRODUCTS: Product[] = [
     price: 950,
     category: 'books',
     description: 'Premium business ledger notebook and ledger tracker for professional records.',
-    image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338384-b8cf19d04720?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -165,7 +165,7 @@ export const PRODUCTS: Product[] = [
     price: 750,
     category: 'books',
     description: 'George S. Clason’s legendary book on wealth creation, financial health, and saving strategies.',
-    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611651-f1bc613d1142?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDN8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs',
     featured: true
   },
@@ -175,7 +175,7 @@ export const PRODUCTS: Product[] = [
     price: 750,
     category: 'books',
     description: '"The Power of a Praying Husband" by Stormie Omartian. Practical guides for married Christian life.',
-    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611677-9f147d07f751?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTJ8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
 
@@ -195,7 +195,7 @@ export const PRODUCTS: Product[] = [
     price: 30,
     category: 'office',
     description: 'Fine point gel ink pen with comfortable rubber grip. Smooth writing, quick drying.',
-    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338691-aa5adecd026e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -204,7 +204,7 @@ export const PRODUCTS: Product[] = [
     price: 30,
     category: 'office',
     description: 'Vibrant gel pens for school notebooks and office reviews. Smooth rollerball action.',
-    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338691-aa5adecd026e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
     price: 100,
     category: 'office',
     description: 'Sleek professional ballpoint pen with premium metal finish and dark ink. Outstanding corporate look.',
-    image: 'https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338385-a031ad2b29c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs',
     featured: true
   },
@@ -223,7 +223,7 @@ export const PRODUCTS: Product[] = [
     price: 95,
     category: 'office',
     description: 'Comfortable writing office pen with ergonomic design. Clean, continuous flow without blots.',
-    image: 'https://images.unsplash.com/photo-1585336261022-675929945037?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784201338518-db111aac85f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -232,7 +232,7 @@ export const PRODUCTS: Product[] = [
     price: 150,
     category: 'office',
     description: 'Multi-use durable stainless steel scissors with comfortable soft grip handles.',
-    image: 'https://images.unsplash.com/photo-1502472545319-8577bd57222e?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611670-de61b848d925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTN8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -241,7 +241,7 @@ export const PRODUCTS: Product[] = [
     price: 430,
     category: 'office',
     description: 'Double hole paper puncher with guide bar, easily punches up to 20-30 paper sheets.',
-    image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1141?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611858-78440d7b11dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzJ8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -250,7 +250,7 @@ export const PRODUCTS: Product[] = [
     price: 300,
     category: 'office',
     description: 'Robust lever arch folder with metal reinforcement edges for tidy office paper organization.',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd45e9b2d4f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611730-b3c4b83e9852?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDF8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
@@ -259,7 +259,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'office',
     description: 'Lightweight easy flat-file binder with fastener. Ideal for organizing active papers.',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd45e9b2d4f?auto=format&fit=crop&q=80&w=300',
+    image: 'https://images.unsplash.com/photo-1784198611686-f93308f64f58?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzR8fHxlbnwwfHx8fHw%3D',
     unit: 'pcs'
   },
   {
