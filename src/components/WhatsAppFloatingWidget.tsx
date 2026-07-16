@@ -17,7 +17,7 @@ export default function WhatsAppFloatingWidget() {
   };
 
   return (
-    <div id="whatsapp-floating-container" className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <div id="whatsapp-floating-container" className="fixed bottom-22 right-4 md:bottom-6 md:right-6 z-40 flex flex-col items-end">
       {/* Expanded Support Window */}
       {isOpen && (
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 mb-3.5 w-80 sm:w-85 animate-fade-in-up">

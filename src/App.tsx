@@ -22,7 +22,10 @@ import {
   Briefcase,
   Layers,
   GraduationCap,
-  MessageSquare
+  MessageSquare,
+  Home,
+  Grid,
+  ShoppingCart
 } from 'lucide-react';
 
 import Header from './components/Header';
@@ -154,10 +157,12 @@ export default function App() {
         setActiveTab={setActiveTab} 
         cartCount={cartCount} 
         onOpenCart={() => setIsCartOpen(true)} 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
       />
 
       {/* Main Layout Views */}
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0">
         
         {/* VIEW 1: HOME */}
         {activeTab === 'home' && (
@@ -223,7 +228,7 @@ export default function App() {
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                   {featuredProducts.map((product) => (
                     <ProductCard
                       key={product.id}
@@ -448,14 +453,14 @@ export default function App() {
                     />
                   </div>
 
-                  {/* Category Pill Buttons */}
-                  <div className="lg:col-span-7 flex flex-wrap gap-2 overflow-x-auto py-1">
+                  {/* Category Pill Buttons (Horizontal Scrollable Chips) */}
+                  <div className="lg:col-span-7 flex overflow-x-auto gap-2.5 pb-2.5 pt-1 scrollbar-none scroll-smooth snap-x -mx-4 px-4 sm:mx-0 sm:px-0 select-none">
                     <button
                       onClick={() => setSelectedCategory('all')}
-                      className={`px-4 py-2 rounded-xl text-xs font-extrabold tracking-wide uppercase transition-all ${
+                      className={`px-4 py-2.5 rounded-xl text-xs font-extrabold tracking-wide uppercase whitespace-nowrap snap-center shrink-0 transition-all cursor-pointer ${
                         selectedCategory === 'all'
-                          ? 'bg-red-600 text-white shadow-sm'
-                          : 'bg-gray-50 hover:bg-gray-100 text-gray-600'
+                          ? 'bg-red-600 text-white shadow-md shadow-red-100'
+                          : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                       }`}
                     >
                       All Departments
@@ -464,10 +469,10 @@ export default function App() {
                       <button
                         key={cat.id}
                         onClick={() => setSelectedCategory(cat.id)}
-                        className={`px-4 py-2 rounded-xl text-xs font-extrabold tracking-wide uppercase transition-all ${
+                        className={`px-4 py-2.5 rounded-xl text-xs font-extrabold tracking-wide uppercase whitespace-nowrap snap-center shrink-0 transition-all cursor-pointer ${
                           selectedCategory === cat.id
-                            ? 'bg-red-600 text-white shadow-sm'
-                            : 'bg-gray-50 hover:bg-gray-100 text-gray-600'
+                            ? 'bg-red-600 text-white shadow-md shadow-red-100'
+                            : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                         }`}
                       >
                         {cat.name}
@@ -546,7 +551,7 @@ export default function App() {
                       Displaying {filteredProducts.length} items in Kenya
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                     {filteredProducts.map((product) => (
                       <ProductCard
                         key={product.id}
@@ -933,6 +938,87 @@ Message: ${content}
 
       {/* Footer component */}
       <Footer setActiveTab={setActiveTab} />
+
+      {/* Mobile Bottom Navigation Bar */}
+      <nav id="mobile-bottom-nav" className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-150 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] h-16 md:hidden flex items-center justify-around px-2 select-none pb-safe">
+        
+        {/* Home Button */}
+        <button
+          onClick={() => {
+            setActiveTab('home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className={`flex flex-col items-center justify-center w-12 h-12 rounded-xl transition-all ${
+            activeTab === 'home' ? 'text-red-600 font-black scale-102' : 'text-gray-400 font-bold hover:text-gray-600'
+          }`}
+          aria-label="Go to Home"
+        >
+          <Home className="h-5 w-5" />
+          <span className="text-[10px] mt-1 tracking-tight">Home</span>
+        </button>
+
+        {/* Catalog Button */}
+        <button
+          onClick={() => {
+            setActiveTab('shop');
+            setSelectedCategory('all');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className={`flex flex-col items-center justify-center w-14 h-12 rounded-xl transition-all ${
+            activeTab === 'shop' ? 'text-red-600 font-black scale-102' : 'text-gray-400 font-bold hover:text-gray-600'
+          }`}
+          aria-label="View Product Catalog"
+        >
+          <Grid className="h-5 w-5" />
+          <span className="text-[10px] mt-1 tracking-tight">Catalog</span>
+        </button>
+
+        {/* Cart Button with Count Badge */}
+        <button
+          onClick={() => setIsCartOpen(true)}
+          className="relative flex flex-col items-center justify-center w-12 h-12 rounded-xl text-gray-400 font-bold hover:text-gray-600"
+          aria-label="Open Cart Sheet"
+        >
+          <div className="relative">
+            <ShoppingCart className={`h-5 w-5 ${cartItems.length > 0 ? 'text-red-600' : 'text-gray-400'}`} />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-[9px] font-black h-4.5 w-4.5 rounded-full flex items-center justify-center border border-white shadow-sm">
+                {cartItems.length}
+              </span>
+            )}
+          </div>
+          <span className={`text-[10px] mt-1 tracking-tight ${cartItems.length > 0 ? 'text-red-600 font-black' : 'text-gray-400'}`}>Cart</span>
+        </button>
+
+        {/* WhatsApp Chat Button */}
+        <button
+          onClick={() => {
+            const phone = "254727209415";
+            const message = "Hello ZMAX Stationers, I am browsing your online store and would like to ask a question.";
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+          }}
+          className="flex flex-col items-center justify-center w-12 h-12 rounded-xl text-emerald-600 font-bold active:scale-95 transition-transform"
+          aria-label="WhatsApp Hotline Chat"
+        >
+          <Phone className="h-5 w-5 fill-emerald-600 stroke-none" />
+          <span className="text-[10px] mt-1 tracking-tight font-black text-emerald-600">WhatsApp</span>
+        </button>
+
+        {/* Contact Button */}
+        <button
+          onClick={() => {
+            setActiveTab('contact');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className={`flex flex-col items-center justify-center w-12 h-12 rounded-xl transition-all ${
+            activeTab === 'contact' ? 'text-red-600 font-black scale-102' : 'text-gray-400 font-bold hover:text-gray-600'
+          }`}
+          aria-label="View Contact Information"
+        >
+          <MessageSquare className="h-5 w-5" />
+          <span className="text-[10px] mt-1 tracking-tight">Contact</span>
+        </button>
+      </nav>
 
     </div>
   );

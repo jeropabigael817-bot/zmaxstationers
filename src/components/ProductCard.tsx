@@ -64,83 +64,83 @@ Delivery Location:
   return (
     <div
       id={`product-card-${product.id}`}
-      className="bg-white rounded-2xl border border-gray-100 hover:border-red-100 hover:shadow-xl hover:shadow-red-50/20 transition-all duration-300 flex flex-col h-full group overflow-hidden"
+      className="bg-white rounded-2xl border border-gray-150 hover:border-red-100 hover:shadow-xl hover:shadow-red-50/20 transition-all duration-300 flex flex-col h-full group overflow-hidden shadow-sm"
     >
-      {/* Product Image Wrapper */}
+      {/* Product Image Wrapper - Centered & Object-Contain (Never cropped) */}
       <div 
-        className="relative pt-[80%] bg-gray-50 overflow-hidden shrink-0 cursor-zoom-in group/img"
+        className="relative pt-[85%] bg-gray-50/50 overflow-hidden shrink-0 cursor-zoom-in group/img flex items-center justify-center"
         onClick={() => setIsLightboxOpen(true)}
       >
         <img
           src={product.image || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=300'}
           alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+          className="absolute inset-0 w-full h-full object-contain p-4 group-hover/img:scale-102 transition-transform duration-500 mx-auto my-auto"
           referrerPolicy="no-referrer"
           loading="lazy"
         />
         
         {/* Quick View Overlay */}
-        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors duration-300 flex items-center justify-center z-10">
+        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors duration-300 flex items-center justify-center z-10">
           <span className="bg-white/95 text-gray-900 text-[10px] font-black tracking-widest uppercase px-3.5 py-2 rounded-full shadow-md scale-90 opacity-0 group-hover/img:scale-100 group-hover/img:opacity-100 transition-all duration-300">
             Quick View
           </span>
         </div>
         
         {/* Category Tag */}
-        <span className={`absolute top-3.5 left-3.5 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg border ${currentBadge.color} shadow-sm backdrop-blur-md bg-white/90 z-10`}>
+        <span className={`absolute top-2.5 left-2.5 text-[9px] md:text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded border ${currentBadge.color} shadow-sm backdrop-blur-md bg-white/90 z-10`}>
           {currentBadge.label}
         </span>
 
         {/* Featured Star Badge */}
         {product.featured && (
-          <span className="absolute top-3.5 right-3.5 bg-amber-500 text-white p-1 rounded-md shadow-sm flex items-center justify-center z-10" title="Bestseller / Popular">
-            <Star className="h-3.5 w-3.5 fill-white stroke-none" />
+          <span className="absolute top-2.5 right-2.5 bg-amber-500 text-white p-1 rounded shadow-sm flex items-center justify-center z-10" title="Bestseller / Popular">
+            <Star className="h-3 w-3 fill-white stroke-none" />
           </span>
         )}
       </div>
 
       {/* Product Info Section */}
-      <div className="p-5 flex flex-col flex-grow justify-between space-y-4">
-        <div className="space-y-1.5">
-          <h3 className="text-gray-900 font-extrabold text-sm sm:text-base tracking-tight leading-snug line-clamp-2 min-h-[2.75rem] group-hover:text-red-600 transition-colors">
+      <div className="p-3.5 md:p-5 flex flex-col flex-grow justify-between space-y-3 md:space-y-4">
+        <div className="space-y-1">
+          <h3 className="text-gray-900 font-extrabold text-sm md:text-base tracking-tight leading-snug line-clamp-2 min-h-[2.5rem] md:min-h-[2.75rem] group-hover:text-red-600 transition-colors">
             {product.name}
           </h3>
-          <p className="text-gray-500 text-xs line-clamp-2 leading-relaxed min-h-[2.5rem]">
+          <p className="text-gray-500 text-[11px] md:text-xs line-clamp-2 leading-relaxed min-h-[2rem] md:min-h-[2.5rem]">
             {product.description || `Authentic high-quality stationery items by ZMAX.`}
           </p>
         </div>
 
-        {/* Pricing and Unit details */}
-        <div className="flex items-baseline space-x-1 border-t border-gray-50 pt-3">
-          <span className="text-[11px] font-bold text-gray-400 uppercase">KES</span>
-          <span className="text-xl font-black text-gray-900">{product.price.toLocaleString()}</span>
+        {/* Pricing and Unit details - Bold */}
+        <div className="flex items-baseline space-x-1 border-t border-gray-50 pt-2.5">
+          <span className="text-[10px] md:text-[11px] font-extrabold text-gray-400 uppercase">KES</span>
+          <span className="text-lg md:text-xl font-black text-gray-900">{product.price.toLocaleString()}</span>
           {product.unit && (
-            <span className="text-xs font-semibold text-gray-500"> / {product.unit}</span>
+            <span className="text-[11px] md:text-xs font-bold text-gray-400">/{product.unit}</span>
           )}
         </div>
 
         {/* Action controllers */}
-        <div className="space-y-2.5 pt-1">
+        <div className="space-y-2 pt-1">
           
-          {/* Quantity Controls */}
-          <div className="flex items-center justify-between bg-gray-50 p-1.5 rounded-xl border border-gray-100">
-            <span className="text-xs font-bold text-gray-500 pl-2">Quantity:</span>
+          {/* Quantity Controls - Compact & Easy for Touch */}
+          <div className="flex items-center justify-between bg-gray-50 p-1 rounded-xl border border-gray-100">
+            <span className="text-[10px] md:text-xs font-extrabold text-gray-400 uppercase tracking-wider pl-1.5">Qty:</span>
             <div className="flex items-center space-x-1">
               <button
                 type="button"
                 onClick={handleDecrement}
-                className="h-7 w-7 rounded-lg bg-white border border-gray-100 text-gray-700 hover:text-red-500 hover:border-red-200 flex items-center justify-center transition-colors shadow-sm cursor-pointer"
+                className="h-8 w-8 rounded-lg bg-white border border-gray-200 text-gray-700 hover:text-red-500 hover:border-red-200 flex items-center justify-center transition-colors shadow-sm cursor-pointer active:scale-95"
                 aria-label="Decrease quantity"
               >
                 <Minus className="h-3.5 w-3.5" />
               </button>
-              <span className="w-8 text-center text-sm font-extrabold text-gray-800">
+              <span className="w-6 text-center text-xs md:text-sm font-black text-gray-900">
                 {quantity}
               </span>
               <button
                 type="button"
                 onClick={handleIncrement}
-                className="h-7 w-7 rounded-lg bg-white border border-gray-100 text-gray-700 hover:text-red-500 hover:border-red-200 flex items-center justify-center transition-colors shadow-sm cursor-pointer"
+                className="h-8 w-8 rounded-lg bg-white border border-gray-200 text-gray-700 hover:text-red-500 hover:border-red-200 flex items-center justify-center transition-colors shadow-sm cursor-pointer active:scale-95"
                 aria-label="Increase quantity"
               >
                 <Plus className="h-3.5 w-3.5" />
@@ -148,23 +148,23 @@ Delivery Location:
             </div>
           </div>
 
-          {/* Quick Buttons Grid */}
-          <div className="grid grid-cols-2 gap-2">
+          {/* Action Buttons Grid - Height 48px for Android ease of use */}
+          <div className="flex flex-col gap-2">
             
-            {/* Add to Cart */}
+            {/* Add to Cart - Large, Prominent */}
             <button
               type="button"
               onClick={handleAddToCartClick}
-              className={`py-2.5 px-2 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5 transition-all duration-200 cursor-pointer border ${
+              className={`h-12 w-full rounded-xl font-extrabold text-xs md:text-sm flex items-center justify-center space-x-1.5 transition-all duration-200 cursor-pointer border ${
                 isInCart || addedAnimation
-                  ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
-                  : 'bg-white hover:bg-red-50 border-gray-200 hover:border-red-200 text-gray-700 hover:text-red-600'
+                  ? 'bg-emerald-50 border-emerald-200 text-emerald-700 shadow-sm'
+                  : 'bg-red-600 hover:bg-red-700 active:bg-red-800 text-white border-transparent shadow-md shadow-red-50'
               }`}
             >
               {addedAnimation ? (
                 <>
                   <Check className="h-4 w-4" />
-                  <span>Added!</span>
+                  <span>Added to Order list</span>
                 </>
               ) : isInCart ? (
                 <>
@@ -174,20 +174,20 @@ Delivery Location:
               ) : (
                 <>
                   <ShoppingCart className="h-4 w-4" />
-                  <span>Add to Cart</span>
+                  <span>Add to Order List</span>
                 </>
               )}
             </button>
 
-            {/* Direct WhatsApp Order */}
+            {/* Direct WhatsApp Order - Green, Touch target 48px */}
             <button
               type="button"
               onClick={handleInstantWhatsAppOrder}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 px-2 rounded-xl flex items-center justify-center space-x-1.5 transition-colors duration-150 cursor-pointer shadow-sm shadow-emerald-100"
+              className="h-12 w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-extrabold text-xs md:text-sm rounded-xl flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-md shadow-emerald-50"
               title="Order this item immediately on WhatsApp"
             >
-              <Phone className="h-3.5 w-3.5 fill-white stroke-none" />
-              <span>Buy Now</span>
+              <Phone className="h-4 w-4 fill-white stroke-none" />
+              <span>Buy on WhatsApp</span>
             </button>
 
           </div>

@@ -18,7 +18,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
   };
 
   return (
-    <footer id="app-footer" className="bg-gray-900 text-gray-300 border-t border-gray-800">
+    <footer id="app-footer" className="bg-gray-900 text-gray-300 border-t border-gray-800 hidden md:block">
       {/* Upper footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
