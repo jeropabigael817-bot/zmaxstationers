@@ -278,7 +278,7 @@ export const PRODUCTS: Product[] = [
     price: 180,
     category: 'office',
     description: 'Strong adhesion heavy-duty packing tape for packages, sealing boxes, and wrapping.',
-    image: 'https://plus.unsplash.com/premium_photo-1680204967360-a56dc5ab8517?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UEFDS0lORyUyMFRBUEV8ZW58MHx8MHx8fDA%3D',
+    image: 'https://images.unsplash.com/photo-1784214235244-a9372d893400?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   },
   {
@@ -362,7 +362,7 @@ export const PRODUCTS: Product[] = [
     price: 250,
     category: 'art_math',
     description: 'Premium self-adhesive sticker paper sheets. Excellent for custom labeling, crafts, and high-quality stickers.',
-    image: 'https://plus.unsplash.com/premium_photo-1707146615071-4d888f924158?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fFN0aWNrZXIlMjBQYXBlciUyMGZvciUyMGxhYmVsbGluZ3xlbnwwfHwwfHx8MA%3D%3D',
+    image: 'https://images.unsplash.com/photo-1784212549065-08a16f845d68?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pack'
   },
   {
@@ -624,6 +624,15 @@ export const PRODUCTS: Product[] = [
     category: 'accessories',
     description: 'Sleek cloth zipper pocket designed for neat classification of pens, highlighters, and USBs.',
     image: 'https://images.unsplash.com/photo-1784198611733-fd4b55eb07b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTV8fHxlbnwwfHx8fHw%3D',
+    unit: 'pcs'
+  },
+  {
+    id: 'ac13',
+    name: 'ROBE CUBEES',
+    price: 200,
+    category: 'accessories',
+    description: 'Fun and engaging 3x3 speed magic cubes. Perfect for mind training, focus, and brain teaser puzzle challenges.',
+    image: 'https://images.unsplash.com/photo-1784213691811-2eb3abacd78c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D',
     unit: 'pcs'
   }
 ];
